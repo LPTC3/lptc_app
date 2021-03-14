@@ -15,6 +15,8 @@ class LPTCApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        fontFamily: 'Montserrat',
         primarySwatch: Colors.blue,
       ),
       home: Menu(),
