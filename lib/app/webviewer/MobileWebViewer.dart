@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:lptc_app/app/webviewer/WebViewer.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -12,6 +14,12 @@ class MobileWebViewer extends StatefulWidget implements WebViewerImpl {
 }
 
 class _MobileWebViewerState extends State<MobileWebViewer> {
+
+  @override
+  void initState() {
+    if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
+    super.initState();
+  }
 
   bool isLoading = true;
 

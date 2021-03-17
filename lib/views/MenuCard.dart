@@ -23,7 +23,7 @@ class MenuCard extends StatelessWidget {
                     child: ListTile(
                   leading: this.icon,
                   title: Text(this.title),
-                  subtitle: Text(this.subTitle),
+                  subtitle: this.subTitle != null ? Text(this.subTitle) : Text(""),
                 ))));
   }
 }
